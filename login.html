@@ -5,14 +5,25 @@
 -->
 
 <html>
+  <head>
+    <script>
+      function onLoginBtnClick(){ 
+        alert(document.getElementById("txtUsername").value);
+      }
+
+      function onClearBtnClick(){ 
+        document.getElementById("txtUsername").value = "";
+      }
+      </script>
+  </head>
 
   <form style="border: 1px solid black; padding; 10px; width: 300px;">
     <label for="id">USERNAME:</label>
     <input type="text" id="txtUsername" name="username"><br>
     <br><label for="id">PASSWORD:</label>
     <input type="text" id="txtPassword" name="pw"><br>
-    <br><button type="btnSubmit">SUBMIT</button>
-    <button type="btnCancel">CANCEL</button><br>
+    <button type="submit" onClick="onLoginBtnClick()">Login</button>
+    <button type="button" onClick="onClearBtnClick()">Clear</button>
   </form>
 
 </html>
