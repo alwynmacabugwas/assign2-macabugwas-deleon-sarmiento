@@ -15,7 +15,21 @@ follow-->
         </style>
         <script>
             function onLoginBtnClick(){
-                alert(document.getElementById("txtUsername").value);
+                const errorMsg = "INCOMPLETE LOGIN DETAILS"
+                var username = document.getElementById("txtUsername").value.trim();
+                let isUsernameEmpty = true;
+
+                if(username.length === 0){
+                    let isUsernameEmpty = true;
+                    alert(errorMsg);
+                    //errorMsg = "ERROR: Either the username or the password were not provided. Please try again."
+                }
+                else{
+                    let isUsernameEmpty = false;
+                }
+
+                console.log("isUsernameEmpty=", isUsernameEmpty);
+                //alert(document.getElementById("txtUsername").value)
             }
             
             function onClearBtnClick(){
