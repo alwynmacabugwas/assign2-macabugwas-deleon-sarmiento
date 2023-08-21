@@ -8,7 +8,16 @@
   <head>
     <script>
       function onLoginBtnClick(){ 
-        alert(document.getElementById("txtUsername").value);
+        var username = document.getElementById("txtUsername").value.trim();
+        var isUsernameEmpty = true;
+
+        if(username.length === 0){
+            var isUsernameEmpty = true;
+        } else {
+            isUsernameEmpty = false;
+      }
+      console.log("isUsernameEmpty=", isUsernameEmpty);
+         
       }
 
       function onClearBtnClick(){ 
